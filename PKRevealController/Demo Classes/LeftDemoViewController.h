@@ -11,6 +11,9 @@
 @interface LeftDemoViewController : UIViewController
 
 #pragma mark - Methods
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 - (IBAction)showOppositeView:(id)sender;
 - (IBAction)togglePresentationMode:(id)sender;
 

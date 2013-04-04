@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFA0FAE7170DFB0E001CC7A7 /* linea.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA0FAE6170DFB0E001CC7A7 /* linea.png */; };
+		EFA0FAE9170DFE87001CC7A7 /* WPCustomTableViewCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA0FAE8170DFE87001CC7A7 /* WPCustomTableViewCell_iPhone.xib */; };
+		EFA0FAEC170DFEAD001CC7A7 /* WPCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA0FAEB170DFEAD001CC7A7 /* WPCustomTableViewCell.m */; };
+		EFA0FAEE170DFFA0001CC7A7 /* linea_white.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA0FAED170DFFA0001CC7A7 /* linea_white.png */; };
 		F932019016B85E56001C2B3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F932018F16B85E56001C2B3E /* Default-568h@2x.png */; };
 		F94D66F116AE1C1200F0DAE3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F94D66E916AE1C1200F0DAE3 /* InfoPlist.strings */; };
 		F94D66F216AE1C1200F0DAE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F94D66EB16AE1C1200F0DAE3 /* main.m */; };
@@ -32,6 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EFA0FAE6170DFB0E001CC7A7 /* linea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = linea.png; path = "Supporting Files/linea.png"; sourceTree = "<group>"; };
+		EFA0FAE8170DFE87001CC7A7 /* WPCustomTableViewCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WPCustomTableViewCell_iPhone.xib; path = "Demo Classes/WPCustomTableViewCell_iPhone.xib"; sourceTree = "<group>"; };
+		EFA0FAEA170DFEAD001CC7A7 /* WPCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WPCustomTableViewCell.h; path = "Demo Classes/WPCustomTableViewCell.h"; sourceTree = "<group>"; };
+		EFA0FAEB170DFEAD001CC7A7 /* WPCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WPCustomTableViewCell.m; path = "Demo Classes/WPCustomTableViewCell.m"; sourceTree = "<group>"; };
+		EFA0FAED170DFFA0001CC7A7 /* linea_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = linea_white.png; path = "Supporting Files/linea_white.png"; sourceTree = "<group>"; };
 		F932018F16B85E56001C2B3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		F94D66EA16AE1C1200F0DAE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		F94D66EB16AE1C1200F0DAE3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 		F9A90B3F168A76B70003D5E0 /* Demo Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EFA0FAEA170DFEAD001CC7A7 /* WPCustomTableViewCell.h */,
+				EFA0FAEB170DFEAD001CC7A7 /* WPCustomTableViewCell.m */,
+				EFA0FAE8170DFE87001CC7A7 /* WPCustomTableViewCell_iPhone.xib */,
 				F94D66FF16AE1E5F00F0DAE3 /* FrontViewController.h */,
 				F94D670016AE1E5F00F0DAE3 /* FrontViewController.m */,
 				F94D670116AE1E5F00F0DAE3 /* LeftDemoViewController.h */,
@@ -115,6 +127,7 @@
 		F9DD514816A973DC00F392F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EFA0FAE6170DFB0E001CC7A7 /* linea.png */,
 				F932018F16B85E56001C2B3E /* Default-568h@2x.png */,
 				F9FCBE8816AF46B000DB38FA /* reveal_menu_icon_landscape.png */,
 				F9FCBE8916AF46B000DB38FA /* reveal_menu_icon_landscape@2x.png */,
@@ -169,6 +182,7 @@
 		F9E6F1A41688B76F00C7CF25 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFA0FAED170DFFA0001CC7A7 /* linea_white.png */,
 				F94D66EB16AE1C1200F0DAE3 /* main.m */,
 				F94D66ED16AE1C1200F0DAE3 /* PKRevealController-Prefix.pch */,
 				F9DD514816A973DC00F392F1 /* Resources */,
@@ -240,6 +254,9 @@
 				F9FCBE8E16AF46B000DB38FA /* reveal_menu_icon_portrait.png in Resources */,
 				F9FCBE8F16AF46B000DB38FA /* reveal_menu_icon_portrait@2x.png in Resources */,
 				F932019016B85E56001C2B3E /* Default-568h@2x.png in Resources */,
+				EFA0FAE7170DFB0E001CC7A7 /* linea.png in Resources */,
+				EFA0FAE9170DFE87001CC7A7 /* WPCustomTableViewCell_iPhone.xib in Resources */,
+				EFA0FAEE170DFFA0001CC7A7 /* linea_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +275,7 @@
 				F94D670916AE1E5F00F0DAE3 /* FrontViewController.m in Sources */,
 				F94D670A16AE1E5F00F0DAE3 /* LeftDemoViewController.m in Sources */,
 				F94D670D16AE1E5F00F0DAE3 /* RightDemoViewController.m in Sources */,
+				EFA0FAEC170DFEAD001CC7A7 /* WPCustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

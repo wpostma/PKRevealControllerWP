@@ -107,7 +107,7 @@ extern NSString * const PKRevealControllerRecognizesResetTapOnFrontViewKey;
 typedef void(^PKDefaultCompletionHandler)(BOOL finished);
 typedef void(^PKDefaultErrorHandler)(NSError *error);
 
-@interface PKRevealController : UIViewController <UIGestureRecognizerDelegate>
+@interface PKRevealController : UIViewController <UIGestureRecognizerDelegate> 
 
 #pragma mark - Properties
 @property (nonatomic, strong, readonly) UIViewController *frontViewController;
@@ -130,6 +130,8 @@ typedef void(^PKDefaultErrorHandler)(NSError *error);
 @property (nonatomic, assign, readwrite) BOOL disablesFrontViewInteraction;
 @property (nonatomic, assign, readwrite) BOOL recognizesPanningOnFrontView;
 @property (nonatomic, assign, readwrite) BOOL recognizesResetTapOnFrontView;
+
+@property int topLimitY; // front view Y limit for gestures.
 
 #pragma mark - Methods
 

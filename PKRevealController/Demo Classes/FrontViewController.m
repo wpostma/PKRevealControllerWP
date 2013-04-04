@@ -42,12 +42,19 @@
     {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:revealImagePortrait landscapeImagePhone:revealImageLandscape style:UIBarButtonItemStylePlain target:self action:@selector(showRightView:)];
     }
+   
+    // Comment out the rest from here to add a different root view that is below the navigation controller.
+    
+   
+    _rowCount = 10;
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView.autoresizingMask = ( UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth );
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
     [self.view addSubview:self.tableView];
+    
 }
 
 #pragma mark - Actions
@@ -102,7 +109,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return _rowCount;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -132,4 +139,20 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        
+        _rowCount--;
+ //       [categoryArray objectAtIndex:indexPath.row];
+   //     [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        
+        [tableView reloadData];
+        
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
 @end

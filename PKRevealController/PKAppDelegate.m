@@ -43,6 +43,8 @@
                                                                     rightViewController:rightViewController
                                                                                 options:nil];
     
+    self.revealController.topLimitY = 55; // hack!
+    
     // Step 4: Set it as your root view controller.
     self.window.rootViewController = self.revealController;
     

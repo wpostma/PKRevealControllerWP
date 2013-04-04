@@ -775,6 +775,35 @@ NSString * const PKRevealControllerRecognizesResetTapOnFrontViewKey = @"PKReveal
 
 #pragma mark - Gesture Recognition
 
+- (BOOL)                             gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    
+    UIView *view1 = otherGestureRecognizer.view;
+    UIView *view2;
+    if (view1) {
+         view2 = view1.superview;
+    };
+    
+    if ([gestureRecognizer.view isKindOfClass:[UITableView class]])
+    {
+        return NO;
+    }
+    // Co-operate by not stealing gestures from UITableView.
+    if ([view1 isKindOfClass:[UITableView class]]) {
+        return NO;
+    }else if ([view1 isKindOfClass:[UITableViewCell class]]) {
+        return NO;
+        // UITableViewCellContentView
+    }
+    else if (view2 && [view2 isKindOfClass:[UITableViewCell class]]) {
+        return NO;
+        // UITableViewCellContentView
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 - (void)didRecognizeTapWithGestureRecognizer:(UITapGestureRecognizer *)recognizer
 {
     [self showViewController:self.frontViewController];
@@ -851,7 +880,17 @@ NSString * const PKRevealControllerRecognizesResetTapOnFrontViewKey = @"PKReveal
     if (gestureRecognizer == self.revealPanGestureRecognizer)
     {
         CGPoint translation = [self.revealPanGestureRecognizer translationInView:self.frontViewContainer];
-        return (fabs(translation.x) >= fabs(translation.y));
+        BOOL begin = (fabs(translation.x) >= fabs(translation.y));
+       
+        // BEGIN HACK
+        if (_topLimitY > 0) {
+         CGPoint location = [gestureRecognizer locationInView:gestureRecognizer.view];
+         if (location.y>_topLimitY) // _topLimitY = 55 for instance.
+            begin = NO;
+        }
+        // END HACK.
+        
+        return begin;
     }
     else if (gestureRecognizer == self.revealResetTapGestureRecognizer)
     {
